@@ -7,7 +7,7 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "jest",
-		"commit": "git-cz",
+		"commit": "cz",
 		"release": "standard-version"
 	},
 	"repository": {
@@ -99,12 +99,14 @@
 			"eslint --fix --max-warnings=-1"
 		]
 	},
-	"config": {
-		"commitizen": {
-			"path": "cz-conventional-changelog",
-			"disableScopeLowerCase": true,
-			"disableSubjectLowerCase": true,
-			"maxHeaderWidth": 72
+	"commitlint": {
+		"extends": [
+			"@commitlint/config-conventional"
+		],
+		"rules": {
+			"header-max-length": [0, "always", 72],
+			"scope-case": "pascal-case",
+			"subject-case": "pascal-case"
 		}
 	}
 }
