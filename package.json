@@ -1,0 +1,110 @@
+{
+	"name": "@seedblocks/ui",
+	"version": "0.1.0",
+	"description": "Simple & Accessible UI Components & Design System for your Solid Applications 🙌 ",
+	"author": "Praney Behl <@praneybehl>",
+	"license": "MIT",
+	"main": "index.js",
+	"scripts": {
+		"test": "jest",
+		"commit": "git-cz",
+		"release": "standard-version"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/seed-blocks/seedblocks-ui.git"
+	},
+	"keywords": [
+		"solid-js",
+		"solid-components",
+		"component-library",
+		"a11y",
+		"accessible",
+		"modular",
+		"design-system",
+		"ui-components",
+		"tree-shakable",
+		"uikit",
+		"accessible",
+		"wai-aria",
+		"dark-mode",
+		"seedblocks-ui"
+	],
+	"bugs": {
+		"url": "https://github.com/seed-blocks/seedblocks-ui/issues"
+	},
+	"homepage": "https://github.com/seed-blocks/seedblocks-ui#readme",
+	"devDependencies": {
+		"@babel/cli": "^7.14.5",
+		"@babel/core": "^7.14.6",
+		"@babel/plugin-proposal-class-properties": "^7.14.5",
+		"@babel/plugin-proposal-object-rest-spread": "^7.14.7",
+		"@babel/plugin-proposal-optional-chaining": "^7.14.5",
+		"@babel/plugin-proposal-private-methods": "^7.14.5",
+		"@babel/preset-env": "^7.14.7",
+		"@babel/preset-typescript": "^7.14.5",
+		"@commitlint/cli": "^12.1.4",
+		"@commitlint/config-conventional": "^12.1.4",
+		"@commitlint/prompt": "^12.1.4",
+		"@rollup/plugin-babel": "^5.3.0",
+		"@rollup/plugin-commonjs": "^19.0.1",
+		"@rollup/plugin-node-resolve": "^13.0.2",
+		"@rollup/plugin-replace": "^3.0.0",
+		"@testing-library/dom": "8.1.0",
+		"@testing-library/jest-dom": "5.14.1",
+		"@types/jest": "26.0.24",
+		"@types/jest-axe": "3.5.2",
+		"@types/wordpress__jest-console": "3.0.4",
+		"@typescript-eslint/eslint-plugin": "^4.28.3",
+		"@typescript-eslint/parser": "^4.28.3",
+		"@wordpress/jest-console": "4.0.5",
+		"babel-jest": "27.0.6",
+		"babel-preset-solid": "^1.0.1",
+		"cz-conventional-changelog": "3.3.0",
+		"eslint": "^7.30.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-import": "^2.23.4",
+		"eslint-plugin-jest": "24.3.6",
+		"eslint-plugin-jsx-a11y": "^6.4.1",
+		"eslint-plugin-prettier": "^3.4.0",
+		"husky": "^7.0.1",
+		"jest": "27.0.6",
+		"jest-axe": "5.0.1",
+		"jest-matcher-utils": "27.0.6",
+		"lint-staged": "^11.0.1",
+		"prettier": "^2.3.2",
+		"raf": "3.4.1",
+		"rimraf": "3.0.2",
+		"rollup": "^2.53.1",
+		"rollup-plugin-ignore": "^1.0.9",
+		"rollup-plugin-terser": "^7.0.2",
+		"solid-jest": "0.1.1",
+		"solid-js": "^1.0.2",
+		"solid-testing-library": "0.2.0",
+		"standard-version": "^9.3.1",
+		"typescript": "^4.3.5"
+	},
+	"peerDependencies": {
+		"solid-js": "^1.0.2"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged",
+			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+		}
+	},
+	"lint-staged": {
+		"src/**/*.{js,jsx,ts,tsx}": [
+			"prettier --write",
+			"eslint --fix --max-warnings=-1"
+		]
+	},
+	"config": {
+		"commitizen": {
+			"path": "cz-conventional-changelog",
+			"disableScopeLowerCase": true,
+			"disableSubjectLowerCase": true,
+			"maxHeaderWidth": 72
+		}
+	}
+}
